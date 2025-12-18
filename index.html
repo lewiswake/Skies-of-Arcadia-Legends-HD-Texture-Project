@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skies of Arcadia Legends HD Texture Project</title>
+    <style>
+      :root {
+        --bg-color: #121212;
+        --text-color: #e0e0e0;
+        --accent-color: #00a8ff;
+        --local-pos: 50%;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        margin: 0;
+        padding: 40px 20px;
+        scroll-behavior: smooth;
+      }
+
+      .content-wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        color: #fff;
+        margin-bottom: 0.5rem;
+        letter-spacing: 1px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      h1 small {
+        display: block;
+        font-weight: 300;
+        color: #aaa;
+        font-size: 1.1rem;
+        margin-top: 10px;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        border-bottom: 1px solid #333;
+        padding-bottom: 10px;
+        margin-top: 60px;
+        color: var(--accent-color);
+      }
+
+      .contents-nav {
+        background: #1e1e1e;
+        padding: 25px;
+        border-radius: 8px;
+        margin-bottom: 60px;
+        border: 1px solid #333;
+        max-width: fit-content;
+      }
+
+      .contents-nav h2 {
+        font-size: 1.2rem;
+        margin-top: 0;
+        border: none;
+        color: #fff;
+        padding: 0;
+        margin-bottom: 15px;
+      }
+
+      .contents-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .contents-nav a {
+        color: var(--accent-color);
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.2s;
+      }
+
+      .contents-nav a:hover {
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: #bbb;
+        margin-bottom: 30px;
+        max-width: 1000px;
+      }
+
+      .comparison-section {
+        margin-bottom: 100px;
+        animation: fadeIn 0.8s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .comparison-section h3 {
+        margin-bottom: 15px;
+        font-size: 1.3rem;
+        border-left: 4px solid var(--accent-color);
+        padding-left: 15px;
+      }
+
+      .comparison-slider {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+        cursor: ew-resize;
+        background: #1a1a1a;
+        --local-pos: 50%;
+      }
+
+      .comparison-slider img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        pointer-events: none;
+      }
+
+      .img-after {
+        clip-path: inset(0 0 0 var(--local-pos));
+        z-index: 2;
+      }
+
+      .slider-bar {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: var(--local-pos);
+        width: 3px;
+        background: white;
+        z-index: 10;
+        transform: translateX(-50%);
+      }
+
+      .slider-bar::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        background: white;
+        border-radius: 50%;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8L22 12L18 16M6 8L2 12L6 16"/></svg>');
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      }
+
+      .badge {
+        position: absolute;
+        top: 20px;
+        padding: 6px 14px;
+        background: rgba(0, 0, 0, 0.75);
+        font-size: 0.75rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        z-index: 5;
+        border-radius: 4px;
+        letter-spacing: 1px;
+        pointer-events: none;
+      }
+      .badge-before {
+        left: 20px;
+      }
+      .badge-after {
+        right: 20px;
+        border: 1px solid var(--accent-color);
+      }
+
+      .technical-grid h3 {
+        color: #fff;
+        margin-top: 40px;
+        font-size: 1.2rem;
+      }
+
+      /* Back to Top Button */
+      #backToTop {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 50px;
+        height: 50px;
+        background-color: var(--accent-color);
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none; /* Hidden by default */
+        z-index: 100;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: opacity 0.3s, transform 0.3s;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #backToTop:hover {
+        transform: scale(1.1);
+        background-color: #fff;
+        color: var(--accent-color);
+      }
+
+      #backToTop svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 60px 0;
+        color: #555;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="backToTop" title="Go to top">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M18 15l-6-6-6 6" />
+      </svg>
+    </button>
+
+    <div class="content-wrapper">
+      <header id="top">
+        <h1>
+          Skies of Arcadia Legends HD Texture Project
+          <small
+            >Originally by Bighead and frozenwings, continued by Lewis
+            Wake</small
+          >
+        </h1>
+      </header>
+
+      <nav class="contents-nav">
+        <h2>Contents</h2>
+        <ul>
+          <li><a href="#gallery">Comparison Gallery</a></li>
+          <li><a href="#upscale-process">Upscale Process</a></li>
+        </ul>
+      </nav>
+
+      <section id="gallery-section">
+        <h2 id="gallery">Comparison Gallery</h2>
+        <p>
+          This gallery showcases the ongoing efforts to upscale and refine the
+          visual assets of Skies of Arcadia Legends. Slide the handle to compare
+          the original GameCube textures with the new high-definition
+          replacements.
+        </p>
+
+        <script>
+          const comparisons = [
+            { title: "Characters and Environment", id: "001" },
+            { title: "Sailor's Island", id: "002" },
+            { title: "Ship Battle UI", id: "003" },
+            { title: "Kalifa", id: "004" },
+            { title: "Cham Alert Spritesheet", id: "005" },
+            { title: "Overworld", id: "006" },
+            { title: "Nasrad Interior", id: "007" },
+            { title: "Valua - Lower City", id: "008" },
+            { title: "Character Portrait: Vyse", id: "009" },
+          ];
+
+          comparisons.forEach((comp) => {
+            document.write(`
+              <div class="comparison-section">
+                <h3>${comp.title}</h3>
+                <div class="comparison-slider">
+                  <img src="images/${comp.id}-before.jpg" alt="Original rendering of ${comp.title}" loading="lazy" />
+                  <div class="badge badge-before">Original</div>
+                  <img class="img-after" src="images/${comp.id}-after.jpg" alt="HD Upscaled rendering of ${comp.title}" loading="lazy" />
+                  <div class="badge badge-after">HD Texture</div>
+                  <div class="slider-bar"></div>
+                </div>
+              </div>
+            `);
+          });
+        </script>
+      </section>
+
+      <h2 id="upscale-process">Upscale Process</h2>
+      <div class="technical-grid">
+        <p>All texture assets are 4x their original size.</p>
+
+        <h3>UI</h3>
+        <p>
+          Missing UI assets from the original Bighead and frozenwings project
+          are recreated and redrawn from scratch.
+        </p>
+
+        <h3>Character faces</h3>
+        <p>
+          Character faces are upscaled using Topaz Gigapixel AI's 'Redefine'
+          generative model at 2x upscale, then 'High fidelity' model at 2x
+          upscale. Textures are then airbrushed in Photoshop to remove artifacts
+          and enhance detail.
+        </p>
+
+        <h3>Character clothing</h3>
+        <p>
+          Character clothing is upscaled using Topaz Gigapixel AI's 'High
+          fidelity' model at 4x upscale. Textures are then edited in Photoshop
+          to enhance detail.
+        </p>
+
+        <h3>Environment</h3>
+        <p>
+          Environment assets are upscaled using Topaz Gigapixel AI's 'Recover'
+          generative model. RIP my GPU...
+        </p>
+
+        <h3>Special effects</h3>
+        <p>
+          Special effect textures (clouds, fire, shadows, lighting) are upscaled
+          4x in Adobe Photoshop and an appropriate Gaussian Blur filter is
+          applied to smooth out pixelation.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      const initSliders = () => {
+        const sliders = document.querySelectorAll(".comparison-slider");
+        const moveSlider = (e, container) => {
+          const rect = container.getBoundingClientRect();
+          const xPos = e.pageX || (e.touches ? e.touches[0].pageX : 0);
+          const x = xPos - rect.left;
+          let percent = (x / rect.width) * 100;
+          percent = Math.max(0, Math.min(percent, 100));
+          container.style.setProperty("--local-pos", `${percent}%`);
+        };
+
+        sliders.forEach((slider) => {
+          slider.addEventListener("mousemove", (e) => moveSlider(e, slider));
+          slider.addEventListener(
+            "touchmove",
+            (e) => {
+              moveSlider(e, slider);
+            },
+            { passive: true }
+          );
+        });
+      };
+
+      // Back to Top Logic
+      const bttButton = document.getElementById("backToTop");
+      window.onscroll = () => {
+        if (
+          document.body.scrollTop > 500 ||
+          document.documentElement.scrollTop > 500
+        ) {
+          bttButton.style.display = "flex";
+        } else {
+          bttButton.style.display = "none";
+        }
+      };
+      bttButton.onclick = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+
+      initSliders();
+    </script>
+  </body>
+</html>
