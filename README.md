@@ -21,7 +21,7 @@ To ensure the game runs smoothly in the Dolphin Emulator without massive RAM ove
 * **Memory Management:** Optimizing for Dolphin’s VRAM usage.
 
 ### 3. Distribution
-We will provide three distinct downloadable packages in both **DDS (Optimized)** and **PNG (Source)** formats:
+I will provide three distinct downloadable packages in both **DDS (Optimized)** and **PNG (Source)** formats:
 * 📦 **Core UI Pack:** High-definition menus, text, and icons.
 * 📦 **Character Pack:** HD faces, clothing, and weapons.
 * 📦 **Environment Pack:** Full world overhaul by location.
