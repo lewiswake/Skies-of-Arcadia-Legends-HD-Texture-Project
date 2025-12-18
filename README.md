@@ -6,7 +6,7 @@ Originally started by **Bighead** and **frozenwings**, this project is currently
 
 ## 🚀 Live Demo
 You can view the interactive before-and-after comparison gallery here:
-**[Insert Your GitHub Pages URL Here]**
+**[View the Live Comparison Gallery](https://lewiswake.github.io/Skies-of-Arcadia-Legends-HD-Texture-Project/)**
 
 ---
 
