@@ -1,503 +1,511 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <title>Skies of Arcadia Legends HD Texture Pack | Complete Overhaul</title>
-    <meta name="description" content="Download the definitive, performance-optimized HD texture pack for Skies of Arcadia Legends on Dolphin Emulator. 4x upscaled, manually retouched, and perfectly optimized into zero-stutter BC7 DDS format." />
-    <meta name="keywords" content="Skies of Arcadia Legends, HD texture pack, Dolphin emulator, GameCube mod, DDS textures, 4x upscale, download, 1vierock alternative, complete mod, retro preservation" />
-    <meta name="author" content="Lewis Wake, Bighead, frozenwings" />
-    
-    <style>
-      :root {
-        --bg-gradient: radial-gradient(circle at top right, #1f2038, #121212 60%);
-        --text-color: #e2e8f0;
-        --accent-color: #38bdf8;
-        --accent-hover: #0ea5e9;
-        --glass-bg: rgba(255, 255, 255, 0.03);
-        --glass-border: rgba(255, 255, 255, 0.08);
-        --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-        --local-pos: 50%;
-      }
 
-      * {
-        box-sizing: border-box;
-      }
+    <!-- Primary Meta Tags -->
+    <title>Skies of Arcadia Legends HD Texture Pack (Dolphin Mod)</title>
+    <meta
+      name="title"
+      content="Skies of Arcadia Legends HD Texture Pack (Dolphin Mod)"
+    />
+    <meta
+      name="description"
+      content="Download the definitive Skies of Arcadia Legends HD texture pack for Dolphin Emulator. Experience 4x upscaled, zero-stutter BC7 DDS textures. Get the mod here."
+    />
+    <meta
+      name="keywords"
+      content="Skies of Arcadia Legends, HD texture pack, Dolphin emulator mod, GameCube HD textures, download, BC7 DDS, 4x upscale, Shoopkid, retro preservation"
+    />
+    <meta name="author" content="Shoopkid, Bighead, frozenwings" />
 
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        background: var(--bg-gradient);
-        background-attachment: fixed;
-        color: var(--text-color);
-        line-height: 1.7;
-        margin: 0;
-        padding: 40px 20px;
-        scroll-behavior: smooth;
-        -webkit-font-smoothing: antialiased;
-      }
+    <!-- Search Engine Crawler Directives -->
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://skiesofarcadiahd.xyz/" />
 
-      .content-wrapper {
-        max-width: 1000px;
-        margin: 0 auto;
-      }
+    <!-- Open Graph / Facebook / Discord Embeds -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://skiesofarcadiahd.xyz/" />
+    <meta
+      property="og:title"
+      content="Skies of Arcadia Legends HD Texture Pack"
+    />
+    <meta
+      property="og:description"
+      content="Download the definitive Skies of Arcadia Legends HD texture pack for Dolphin Emulator. 4x upscaled, zero-stutter BC7 DDS textures."
+    />
+    <meta
+      property="og:image"
+      content="https://skiesofarcadiahd.xyz/images/og-image.jpg"
+    />
 
-      header {
-        text-align: center;
-        margin-bottom: 40px;
-      }
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://skiesofarcadiahd.xyz/" />
+    <meta
+      property="twitter:title"
+      content="Skies of Arcadia Legends HD Texture Pack"
+    />
+    <meta
+      property="twitter:description"
+      content="Download the definitive Skies of Arcadia Legends HD texture pack for Dolphin Emulator. 4x upscaled, zero-stutter BC7 DDS textures."
+    />
+    <meta
+      property="twitter:image"
+      content="https://skiesofarcadiahd.xyz/images/og-image.jpg"
+    />
 
-      h1 {
-        font-size: clamp(2rem, 5vw, 3rem);
-        color: #fff;
-        margin-bottom: 0.5rem;
-        letter-spacing: -0.5px;
-        line-height: 1.2;
-      }
-
-      h1 small {
-        display: block;
-        font-weight: 400;
-        color: #94a3b8;
-        font-size: clamp(1rem, 2vw, 1.2rem);
-        margin-top: 12px;
-      }
-
-      h2 {
-        font-size: 2rem;
-        margin-top: 80px;
-        margin-bottom: 24px;
-        color: #fff;
-        font-weight: 600;
-        letter-spacing: -0.5px;
-      }
-
-      /* Glassmorphism Panels */
-      .glass-panel {
-        background: var(--glass-bg);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border: 1px solid var(--glass-border);
-        border-radius: 20px;
-        padding: 30px;
-        box-shadow: var(--glass-shadow);
-      }
-
-      /* Download Section */
-      .download-section {
-        text-align: center;
-        margin-bottom: 60px;
-        padding: 40px 30px;
-      }
-
-      .download-section p {
-        font-size: 1.2rem;
-        color: #cbd5e1;
-        margin-bottom: 30px;
-      }
-
-      .button-group {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 16px 32px;
-        font-size: 1.1rem;
-        font-weight: 600;
-        text-decoration: none;
-        border-radius: 12px;
-        transition: all 0.2s ease;
-      }
-
-      .btn-primary {
-        background-color: var(--accent-color);
-        color: #0f172a;
-        box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
-      }
-
-      .btn-primary:hover {
-        background-color: var(--accent-hover);
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
-      }
-
-      .btn-secondary {
-        background-color: rgba(255, 255, 255, 0.1);
-        color: #fff;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-      }
-
-      .btn-secondary:hover {
-        background-color: rgba(255, 255, 255, 0.15);
-        transform: translateY(-2px);
-      }
-
-      /* Navigation */
-      .contents-nav {
-        margin-bottom: 60px;
-        display: inline-block;
-      }
-
-      .contents-nav h2 {
-        font-size: 1.2rem;
-        margin: 0 0 15px 0;
-      }
-
-      .contents-nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .contents-nav a {
-        color: var(--accent-color);
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.2s;
-      }
-
-      .contents-nav a:hover {
-        color: #fff;
-      }
-
-      p {
-        color: #cbd5e1;
-        margin-bottom: 24px;
-        font-size: 1.1rem;
-      }
-
-      /* Sliders */
-      .comparison-section {
-        margin-bottom: 80px;
-      }
-
-      .comparison-section h3 {
-        margin-bottom: 20px;
-        font-size: 1.4rem;
-        color: #fff;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-
-      .comparison-section h3::before {
-        content: "";
-        display: block;
-        width: 12px;
-        height: 12px;
-        background: var(--accent-color);
-        border-radius: 50%;
-      }
-
-      .comparison-slider {
-        position: relative;
-        width: 100%;
-        aspect-ratio: 16 / 9;
-        overflow: hidden;
-        border-radius: 16px;
-        border: 1px solid var(--glass-border);
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-        cursor: ew-resize;
-        background: #000;
-        --local-pos: 50%;
-      }
-
-      .comparison-slider img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        pointer-events: none;
-      }
-
-      .img-after {
-        clip-path: inset(0 0 0 var(--local-pos));
-        z-index: 2;
-      }
-
-      .slider-bar {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: var(--local-pos);
-        width: 2px;
-        background: rgba(255, 255, 255, 0.9);
-        z-index: 10;
-        transform: translateX(-50%);
-        box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      }
-
-      .slider-bar::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 36px;
-        height: 36px;
-        background: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(4px);
-        border-radius: 50%;
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="%230f172a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8L22 12L18 16M6 8L2 12L6 16"/></svg>');
-        background-repeat: no-repeat;
-        background-position: center;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      }
-
-      .badge {
-        position: absolute;
-        top: 20px;
-        padding: 6px 16px;
-        background: rgba(15, 23, 42, 0.7);
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        color: #fff;
-        font-size: 0.8rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        z-index: 5;
-        border-radius: 30px;
-        letter-spacing: 1px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        pointer-events: none;
-      }
-
-      .badge-before { left: 20px; }
-      .badge-after { right: 20px; border-color: var(--accent-color); color: var(--accent-color); }
-
-      /* Technical Grid & Roadmap */
-      .technical-grid h3 {
-        color: #fff;
-        margin-top: 40px;
-        font-size: 1.3rem;
-      }
-
-      .roadmap-box ul {
-        color: #cbd5e1;
-        font-size: 1.1rem;
-        margin-bottom: 20px;
-        padding-left: 20px;
-      }
-
-      .roadmap-box li {
-        margin-bottom: 10px;
-      }
-
-      /* Back to Top */
-      #backToTop {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        width: 50px;
-        height: 50px;
-        background-color: var(--glass-bg);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid var(--glass-border);
-        color: #fff;
-        border-radius: 50%;
-        cursor: pointer;
-        display: none;
-        z-index: 100;
-        box-shadow: var(--glass-shadow);
-        transition: all 0.3s ease;
-        align-items: center;
-        justify-content: center;
-      }
-
-      #backToTop:hover {
-        transform: translateY(-5px);
-        background-color: rgba(255,255,255,0.1);
-        border-color: var(--accent-color);
-        color: var(--accent-color);
-      }
-
-      #backToTop svg { width: 20px; height: 20px; }
-
-      footer {
-        text-align: center;
-        padding: 60px 0;
-        color: #64748b;
-        font-size: 0.95rem;
-        border-top: 1px solid var(--glass-border);
-        margin-top: 60px;
-      }
-      
-      /* Mobile optimization */
-      @media (max-width: 768px) {
-        .button-group {
-          flex-direction: column;
-        }
-        .btn {
-          width: 100%;
-          justify-content: center;
-        }
-      }
-    </style>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <button id="backToTop" title="Go to top">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <header class="site-header">
+      <div class="header-container">
+        <a href="#top" class="site-logo">Skies of Arcadia HD</a>
+
+        <nav class="desktop-nav" aria-label="Main Navigation">
+          <ul>
+            <li><a href="#download">Download</a></li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#gallery-section">Gallery</a></li>
+            <li><a href="#upscale-process">Process</a></li>
+            <li><a href="#roadmap-section">Roadmap</a></li>
+          </ul>
+        </nav>
+
+        <button
+          id="mobileMenuBtn"
+          class="mobile-menu-btn"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+          aria-label="Toggle navigation menu"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <nav id="mobileNav" class="mobile-nav" aria-hidden="true">
+      <ul>
+        <li><a href="#download">Download</a></li>
+        <li><a href="#installation">How to Install</a></li>
+        <li><a href="#gallery-section">Comparison Gallery</a></li>
+        <li><a href="#upscale-process">Upscale Process</a></li>
+        <li><a href="#roadmap-section">Project Roadmap</a></li>
+      </ul>
+    </nav>
+    <div id="navBackdrop" class="nav-backdrop"></div>
+
+    <main class="content-wrapper">
+      <section id="top" class="hero-section">
+        <h1>Skies of Arcadia Legends HD Texture Pack</h1>
+        <p class="subtitle">
+          Originally by Bighead & frozenwings, continued by Shoopkid.
+        </p>
+        <p class="subtitle" style="font-size: 0.95rem; margin-top: 8px">
+          Last updated: June 25, 2026
+        </p>
+
+        <div style="margin-top: 32px">
+          <a href="#gallery-section" class="btn btn-secondary">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <circle cx="8.5" cy="8.5" r="1.5"></circle>
+              <polyline points="21 15 16 10 5 21"></polyline>
+            </svg>
+            View Comparison Gallery
+          </a>
+        </div>
+      </section>
+
+      <section id="download" class="surface-panel download-section">
+        <h2>Download the HD Texture Pack</h2>
+        <p>
+          Available in six modular packages. Fully converted to BC7 DDS format
+          for zero stuttering and instantly loaded into your GPU's VRAM.
+        </p>
+
+        <div class="button-group">
+          <a
+            href="https://archive.org/details/skies-of-arcadia-legends-hd-texture-pack-4x-upscaled-dds-v1"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              <path d="M10 4v4"></path>
+              <path d="M14 4v4"></path>
+              <path d="M6 4v4"></path>
+              <path d="M18 4v4"></path>
+            </svg>
+            View Archive Repository
+          </a>
+        </div>
+
+        <h3 class="modular-heading">Modular Downloads</h3>
+        <div class="bento-grid">
+          <a
+            href="https://archive.org/download/skies-of-arcadia-legends-hd-texture-pack-4x-upscaled-dds-v1/01_SoAL_HD_UI.7z"
+            class="bento-card"
+          >
+            <div class="bento-content">
+              <h4>01. UI Assets</h4>
+              <span class="file-size">34.5 MB</span>
+            </div>
+            <svg
+              class="bento-icon"
+              aria-hidden="true"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+          <a
+            href="https://archive.org/download/skies-of-arcadia-legends-hd-texture-pack-4x-upscaled-dds-v1/02_SoAL_HD_Characters.7z"
+            class="bento-card"
+          >
+            <div class="bento-content">
+              <h4>02. Characters</h4>
+              <span class="file-size">405.2 MB</span>
+            </div>
+            <svg
+              class="bento-icon"
+              aria-hidden="true"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+          <a
+            href="https://archive.org/download/skies-of-arcadia-legends-hd-texture-pack-4x-upscaled-dds-v1/03_SoAL_HD_Environments.7z"
+            class="bento-card"
+          >
+            <div class="bento-content">
+              <h4>03. Environments</h4>
+              <span class="file-size">104.6 MB</span>
+            </div>
+            <svg
+              class="bento-icon"
+              aria-hidden="true"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+          <a
+            href="https://archive.org/download/skies-of-arcadia-legends-hd-texture-pack-4x-upscaled-dds-v1/04_SoAL_HD_Effects.7z"
+            class="bento-card"
+          >
+            <div class="bento-content">
+              <h4>04. Effects</h4>
+              <span class="file-size">86.2 MB</span>
+            </div>
+            <svg
+              class="bento-icon"
+              aria-hidden="true"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+          <a
+            href="https://archive.org/download/skies-of-arcadia-legends-hd-texture-pack-4x-upscaled-dds-v1/05_SoAL_HD_Cutscene_Artwork.7z"
+            class="bento-card"
+          >
+            <div class="bento-content">
+              <h4>05. Cutscene Artwork</h4>
+              <span class="file-size">48.9 MB</span>
+            </div>
+            <svg
+              class="bento-icon"
+              aria-hidden="true"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+          <a
+            href="https://archive.org/download/skies-of-arcadia-legends-hd-texture-pack-4x-upscaled-dds-v1/06_SoAL_HD_Unsorted_Assets.7z"
+            class="bento-card"
+          >
+            <div class="bento-content">
+              <h4>06. Unsorted Assets</h4>
+              <span class="file-size">6.0 GB</span>
+            </div>
+            <svg
+              class="bento-icon"
+              aria-hidden="true"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <section id="installation" class="surface-panel install-section">
+        <h2>How to Install on Dolphin Emulator</h2>
+        <p>
+          Follow these steps to correctly apply the textures and ensure
+          zero-stutter performance.
+        </p>
+
+        <ol class="install-steps">
+          <li>
+            <div class="step-content">
+              <h3 class="step-title">Extract the files</h3>
+              <p>
+                Download your desired <code>.7z</code> packages above and
+                extract them using
+                <a href="https://www.7-zip.org/" target="_blank" rel="noopener"
+                  >7-Zip</a
+                >. You will see a folder named <code>GEA</code> (which is the
+                GameCube ID for Skies of Arcadia Legends).
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="step-content">
+              <h3 class="step-title">Move to Dolphin's Load Directory</h3>
+              <p>
+                Copy the extracted <code>GEA</code> folder and paste it into
+                Dolphin's custom textures directory. Depending on your OS, this
+                is usually located at:
+              </p>
+              <div class="code-block">
+                Documents\Dolphin Emulator\Load\Textures\
+              </div>
+              <p class="path-note">
+                The final folder path must look exactly like this:
+                <code>...\Load\Textures\GEA</code>
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="step-content">
+              <h3 class="step-title">Enable Custom Textures in Dolphin</h3>
+              <p>
+                Open Dolphin and click on <strong>Graphics</strong>, then
+                navigate to the <strong>Advanced</strong> tab. Under the
+                <em>Utility</em> section, check the box for
+                <strong>Load Custom Textures</strong>.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="step-content">
+              <h3 class="step-title">
+                Enable Prefetching (Crucial for Stutter-Free Play)
+              </h3>
+              <p>
+                Right underneath "Load Custom Textures", check the box for
+                <strong>Prefetch Custom Textures</strong>. Because these files
+                are optimized as BC7 DDS, prefetching will instantly load them
+                into your GPU's VRAM, eliminating in-game hitching entirely.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="gallery-section">
+        <h2>Comparison Gallery</h2>
+        <p>
+          This gallery showcases the manual restoration and upscaling of the
+          visual assets. Slide the handle to compare the original GameCube
+          textures with the new high-definition replacements.
+        </p>
+        <div id="gallery-container"></div>
+      </section>
+
+      <section id="upscale-process" class="technical-grid">
+        <h2>Upscale Process</h2>
+        <p>
+          All texture assets are 4x their original size and perfectly optimized.
+        </p>
+
+        <div class="process-items">
+          <div class="process-item">
+            <h3>UI</h3>
+            <p>
+              Missing or compressed UI assets from the original Bighead and
+              frozenwings project are recreated and redrawn from scratch for
+              pixel-perfect clarity.
+            </p>
+          </div>
+          <div class="process-item">
+            <h3>Character faces</h3>
+            <p>
+              Character faces are upscaled using Topaz Gigapixel AI's 'Redefine'
+              generative model at 2x upscale, then 'High fidelity' model at 2x
+              upscale. Textures are then carefully airbrushed in Photoshop to
+              remove artifacts and enhance detail.
+            </p>
+          </div>
+          <div class="process-item">
+            <h3>Character clothing</h3>
+            <p>
+              Character clothing is upscaled using Topaz Gigapixel AI's 'High
+              fidelity' model at 4x upscale. Textures are then edited in
+              Photoshop to enhance localized detail.
+            </p>
+          </div>
+          <div class="process-item">
+            <h3>Environment</h3>
+            <p>
+              Environment assets are upscaled using Topaz Gigapixel AI's
+              'Recover' generative model.
+            </p>
+          </div>
+          <div class="process-item">
+            <h3>Special effects</h3>
+            <p>
+              Special effect textures (clouds, fire, shadows, lighting) are
+              upscaled 4x in Adobe Photoshop and an appropriate Gaussian Blur
+              filter is applied to smooth out harsh pixelation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="roadmap-section" class="surface-panel roadmap-section">
+        <h2>Project Roadmap</h2>
+        <p>
+          The project has successfully completed the Organization & Optimization
+          phase. With nearly 17,000 files successfully processed, the focus is
+          now on community distribution and flexible installation.
+        </p>
+        <div class="status-box">
+          <h3>Completed Milestones</h3>
+          <ul>
+            <li>
+              <strong>BC7 DDS Conversion:</strong> All PNG assets successfully
+              converted to BC7 format, bypassing CPU decoding for zero-stutter
+              Dolphin performance.
+            </li>
+            <li>
+              <strong>Modular Distribution:</strong> The monolithic 23GB project
+              has been efficiently compressed and split into 6 distinct,
+              downloadable packages.
+            </li>
+            <li>
+              <strong>Structure Clean-up:</strong> The folder hierarchy
+              perfectly matches Dolphin's expected NTSC-U (`GEA`) structure for
+              immediate plug-and-play functionality.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="content-wrapper">
+        <p>&copy; 2026 Skies of Arcadia Legends HD Texture Project</p>
+        <p class="footer-subtext">
+          A fan preservation project. Original assets belong to SEGA /
+          Overworks.
+        </p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" aria-label="Scroll to top">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
         <path d="M18 15l-6-6-6 6" />
       </svg>
     </button>
 
-    <div class="content-wrapper">
-      <header id="top">
-        <h1>
-          Skies of Arcadia Legends HD
-          <small>The definitive 4x upscaled, zero-stutter texture overhaul. Originally by Bighead & frozenwings, continued by Shoopkid.</small>
-        </h1>
-      </header>
-
-      <section class="glass-panel download-section">
-        <h2>Download the Mod</h2>
-        <p>Available now in 6 modular packages. Fully converted to BC7 DDS format for zero stuttering and instantly loaded into your GPU's VRAM.</p>
-        <div class="button-group">
-          <a href="#" class="btn btn-primary">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-            Download on Nexus Mods
-          </a>
-          <a href="https://archive.org/details/skies-of-arcadia-legends-hd-texture-pack-4x-upscaled-dds-v1" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M10 4v4"></path><path d="M14 4v4"></path><path d="M6 4v4"></path><path d="M18 4v4"></path></svg>
-            Internet Archive Mirror
-          </a>
-        </div>
-      </section>
-
-      <nav class="glass-panel contents-nav">
-        <h2>Contents</h2>
-        <ul>
-          <li><a href="#gallery">Comparison Gallery</a></li>
-          <li><a href="#upscale-process">Upscale Process</a></li>
-          <li><a href="#project-roadmap">Project Status</a></li>
-        </ul>
-      </nav>
-
-      <section id="gallery-section">
-        <h2 id="gallery">Comparison Gallery</h2>
-        <p>
-          This gallery showcases the manual restoration and upscaling of the visual assets. Slide the handle to compare the original GameCube textures with the new high-definition replacements.
-        </p>
-
-        <script>
-          const comparisons = [
-            { title: "Vyse", id: "001" },
-            { title: "Sailor's Island", id: "002" },
-            { title: "Ship Battle UI", id: "003" },
-            { title: "Characters and Environment", id: "004" },
-            { title: "Cham Alert Spritesheet", id: "005" },
-            { title: "Overworld", id: "006" },
-            { title: "Ixa'Ness Demons", id: "007" },
-            { title: "Alfonso", id: "008" },
-            { title: "Battle UI", id: "009" },
-          ];
-
-          comparisons.forEach((comp) => {
-            document.write(`
-              <div class="comparison-section">
-                <h3>${comp.title}</h3>
-                <div class="comparison-slider">
-                  <img src="images/${comp.id}-before.jpg" alt="Original Gamecube rendering of ${comp.title}" loading="lazy" />
-                  <div class="badge badge-before">Original</div>
-                  <img class="img-after" src="images/${comp.id}-after.jpg" alt="HD 4x Upscaled rendering of ${comp.title}" loading="lazy" />
-                  <div class="badge badge-after">HD Texture</div>
-                  <div class="slider-bar"></div>
-                </div>
-              </div>
-            `);
-          });
-        </script>
-      </section>
-
-      <h2 id="upscale-process">Upscale Process</h2>
-      <div class="technical-grid">
-        <p>All texture assets are 4x their original size and perfectly optimized.</p>
-
-        <h3>UI</h3>
-        <p>Missing or compressed UI assets from the original Bighead and frozenwings project are recreated and redrawn from scratch for pixel-perfect clarity.</p>
-
-        <h3>Character faces</h3>
-        <p>Character faces are upscaled using Topaz Gigapixel AI's 'Redefine' generative model at 2x upscale, then 'High fidelity' model at 2x upscale. Textures are then carefully airbrushed in Photoshop to remove artifacts and enhance detail.</p>
-
-        <h3>Character clothing</h3>
-        <p>Character clothing is upscaled using Topaz Gigapixel AI's 'High fidelity' model at 4x upscale. Textures are then edited in Photoshop to enhance localized detail.</p>
-
-        <h3>Environment</h3>
-        <p>Environment assets are upscaled using Topaz Gigapixel AI's 'Recover' generative model.</p>
-
-        <h3>Special effects</h3>
-        <p>Special effect textures (clouds, fire, shadows, lighting) are upscaled 4x in Adobe Photoshop and an appropriate Gaussian Blur filter is applied to smooth out harsh pixelation.</p>
-      </div>
-
-      <section id="roadmap-section">
-        <h2 id="project-roadmap">Project Status: Distribution Phase</h2>
-        <p>
-            The project has successfully completed the Organization & Optimization phase. With nearly 17,000 files successfully processed, the focus is now on community distribution and flexible installation.
-        </p>
-        
-        <div class="glass-panel roadmap-box">
-            <h3>Completed Milestones</h3>
-            <ul>
-                <li><strong>BC7 DDS Conversion:</strong> All PNG assets successfully converted to BC7 format, bypassing CPU decoding for zero-stutter Dolphin performance.</li>
-                <li><strong>Modular Distribution:</strong> The monolithic 23GB project has been efficiently compressed and split into 6 distinct, downloadable packages.</li>
-                <li><strong>Structure Clean-up:</strong> The folder hierarchy perfectly matches Dolphin's expected NTSC-U (`GEA`) structure for immediate plug-and-play functionality.</li>
-            </ul>
-        </div>
-      </section>
-
-      <footer>
-        <p>&copy; 2026 Skies of Arcadia Legends HD Texture Project</p>
-        <p>A fan preservation project. Original assets belong to SEGA / Overworks.</p>
-      </footer>
-    </div>
-
-    <script>
-      const initSliders = () => {
-        const sliders = document.querySelectorAll(".comparison-slider");
-        const moveSlider = (e, container) => {
-          const rect = container.getBoundingClientRect();
-          const xPos = e.pageX || (e.touches ? e.touches[0].pageX : 0);
-          const x = xPos - rect.left;
-          let percent = (x / rect.width) * 100;
-          percent = Math.max(0, Math.min(percent, 100));
-          container.style.setProperty("--local-pos", `${percent}%`);
-        };
-
-        sliders.forEach((slider) => {
-          slider.addEventListener("mousemove", (e) => moveSlider(e, slider));
-          slider.addEventListener("touchmove", (e) => { moveSlider(e, slider); }, { passive: true });
-        });
-      };
-
-      const bttButton = document.getElementById("backToTop");
-      window.onscroll = () => {
-        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-          bttButton.style.display = "flex";
-          bttButton.style.opacity = "1";
-        } else {
-          bttButton.style.display = "none";
-          bttButton.style.opacity = "0";
-        }
-      };
-      
-      bttButton.onclick = () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      };
-
-      initSliders();
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
