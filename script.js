@@ -125,4 +125,25 @@ document.addEventListener("DOMContentLoaded", () => {
   bttButton.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+// --- 4. YouTube Embed Local File Fallback (Resolves YouTube Error 153 on file://) ---
+  if (window.location.protocol === "file:") {
+    const videoContainer = document.getElementById("videoContainer");
+    if (videoContainer) {
+      videoContainer.innerHTML = `
+        <div class="video-local-fallback">
+          <img src="https://img.youtube.com/vi/PrEvpRJ37PM/maxresdefault.jpg" alt="Video preview thumbnail" class="fallback-thumb" />
+          <div class="fallback-overlay">
+            <a href="https://youtu.be/PrEvpRJ37PM" target="_blank" rel="noopener noreferrer" class="play-btn-circle" aria-label="Watch Intro on YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="36" height="36"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </a>
+            <p class="fallback-note">
+              <strong>Local File Notice:</strong> YouTube blocks embedded players when loaded directly from <code>file://</code> paths (Error 153).<br />
+              <a href="https://youtu.be/PrEvpRJ37PM" target="_blank" rel="noopener noreferrer" style="color: #38bdf8; text-decoration: underline; font-weight: 600;">Click here to watch on YouTube</a> or launch via a local web server (<code>python -m http.server</code>).<br />
+              <span style="font-size: 0.85rem; color: #94a3b8;">(The embedded player functions automatically once hosted on your live domain).</span>
+            </p>
+          </div>
+        </div>
+      `;
+    }
+  }
 });
