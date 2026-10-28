@@ -271,6 +271,95 @@ a:hover {
   color: var(--text-secondary);
 }
 
+/* Featured Video Embed */
+.video-container {
+  margin-top: 40px;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  background-color: #000;
+  aspect-ratio: 16 / 9;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  aspect-ratio: 16 / 9;
+}
+
+/* Video Local Fallback (for file:// protocol to resolve YouTube Error 153) */
+.video-local-fallback {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+}
+
+.fallback-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+
+.fallback-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  background: radial-gradient(circle, rgba(15, 23, 42, 0.6) 0%, rgba(15, 23, 42, 0.92) 100%);
+}
+
+.play-btn-circle {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-color: #ef4444;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(239, 68, 68, 0.5);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+
+.play-btn-circle:hover {
+  transform: scale(1.08);
+  background-color: #dc2626;
+}
+
+.play-btn-circle svg {
+  margin-left: 4px;
+}
+
+.fallback-note {
+  max-width: 580px;
+  font-size: 0.95rem;
+  color: #f8fafc;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.fallback-note code {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
 /* Surface Panels */
 .surface-panel {
   background-color: var(--surface-color);
@@ -641,6 +730,225 @@ a:hover {
 .back-to-top svg {
   width: 24px;
   height: 24px;
+}
+
+/* --- Changelog & Version History --- */
+.changelog-section {
+  margin-bottom: 80px;
+}
+
+.section-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.version-tag-latest {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 6px 16px;
+  background-color: var(--accent-color);
+  color: var(--accent-text);
+  border-radius: 9999px;
+  box-shadow: var(--shadow-sm);
+}
+
+.changelog-card {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 24px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.changelog-latest {
+  border-color: var(--accent-color);
+  border-width: 2px;
+  box-shadow: var(--shadow-md);
+}
+
+.changelog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.changelog-title-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.release-pill {
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.pill-latest {
+  background-color: var(--accent-color);
+  color: var(--accent-text);
+}
+
+.pill-archive {
+  background-color: var(--border-color);
+  color: var(--text-secondary);
+}
+
+.changelog-version-title {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.changelog-date {
+  font-size: 0.9rem;
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+.changelog-summary {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.changelog-highlights h4 {
+  font-size: 1rem;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.changelog-highlights ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.changelog-highlights li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.changelog-highlights li::before {
+  content: "\2192";
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+.btn-sm {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+}
+
+/* Accessible Native <details> / <summary> for Version Archives */
+details.changelog-archive {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+details.changelog-archive[open] {
+  border-color: var(--border-hover);
+}
+
+summary.changelog-archive-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 600;
+  color: var(--text-primary);
+  list-style: none;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+summary.changelog-archive-summary::-webkit-details-marker {
+  display: none;
+}
+
+summary.changelog-archive-summary:hover {
+  background-color: var(--surface-hover);
+}
+
+.summary-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.summary-meta {
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  font-weight: normal;
+}
+
+.archive-content {
+  padding: 0 24px 24px 24px;
+  border-top: 1px solid var(--border-color);
+  margin-top: 8px;
+  padding-top: 16px;
+  color: var(--text-secondary);
+}
+
+.archive-content ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 12px;
+}
+
+.archive-content li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.archive-content li::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  color: var(--text-tertiary);
+}
+
+/* Roadmap Grid */
+.roadmap-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.status-upcoming li::before {
+  content: "\23F3";
+  position: absolute;
+  left: 0;
+  font-size: 0.85rem;
 }
 
 /* Responsive Breakpoints */
