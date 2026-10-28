@@ -1,70 +1,90 @@
-# Skies of Arcadia Legends HD Texture Project
+# Skies of Arcadia Legends HD Texture Pack
 
-A high-definition texture overhaul for **Skies of Arcadia Legends** (GameCube), focusing on modernizing the visual experience while staying true to the original art direction.
+A high-definition texture replacement pack for **Skies of Arcadia Legends** (GameCube) on Dolphin Emulator.
 
-Originally started by **Bighead** and **frozenwings**, this project is currently being continued and expanded by **Lewis Wake**.
-
-## 🗺️ Project Roadmap
-
-The project is currently in the **Organization & Optimization Phase**. With 42,495 files totaling 22.7 GB, the focus is on performance and user choice.
-
-### 1. File Organization (Ongoing)
-The primary goal is to **Combine** all assets into a clean, modular hierarchy. This allows users to download only the parts of the game they want to upgrade.
-* **Characters:** (By Name or Group)
-* **UI:** (Maps, Text, Battle UI)
-* **Environments:** (By Area and Location)
-
-### 2. Technical Optimization
-To ensure the game runs smoothly in the Dolphin Emulator without massive RAM overhead:
-* **DDS Conversion:** All PNG assets will be converted to the `.dds` format (DirectDraw Surface).
-* **Compression:** Implementing BC7 or BC1-BC3 compression to reduce the 22.7 GB footprint while maintaining "Recover" model quality.
-* **Memory Management:** Optimizing for Dolphin’s VRAM usage.
-
-### 3. Distribution
-I will provide three distinct downloadable packages in both **DDS (Optimized)** and **PNG (Source)** formats:
-* 📦 **Core UI Pack:** High-definition menus, text, and icons.
-* 📦 **Character Pack:** HD faces, clothing, and weapons.
-* 📦 **Environment Pack:** Full world overhaul by location.
+Originally created by **Bighead** and **frozenwings**, continued by Shoopkid.
 
 ---
 
-## 🚀 Live Demo
-You can view the interactive before-and-after comparison gallery here:
-**[View the Live Comparison Gallery](https://lewiswake.github.io/Skies-of-Arcadia-Legends-HD-Texture-Project/)**
+## Download: v0.2.0 (October 2026)
+
+Download releases and modular packages from **[GitHub Releases (v0.2.0)](https://github.com/shoopkid/Skies-of-Arcadia-Legends-HD-Textures-Pack/releases/tag/v0.2.0)**.
+
+### Changes in v0.2.0
+* **Character Calibrations:** Rebalanced Fina's hand textures to match her natural skin tone, adjusted front bangs across 12 hair textures to match golden-blonde crown lighting, and cleared murky shadow artifacts on flared sleeves.
+* **Weapon Restorations:** Reconstructed Aika's starting boomerang handle (restored specular highlights, 4x leather texture, silver rivets) and Vyse's cutlasses (wire hilt sheen, cutting edge specular glints, blade studs).
+* **Dolphin DDS Mipmap Fix:** Strict single-mip flags (`-m 1`) on non-mipmapped textures to resolve Dolphin rejection errors; true mipmapped textures (`_m_`) retain full mip chains.
+* **Environment Packages Under 2 GB:** Split environment assets into 4 packages (Overworld & Ships, Disc 1 Part 1, Disc 1 Part 2, Disc 2) for easier downloading.
+* **BC7 DDS Format:** Converted to DirectDraw Surface format for GPU prefetching and stutter-free Dolphin playback.
 
 ---
 
-## 🛠 Upscale Process & Methodology
+## Modular Packages
 
-This project utilizes modern AI generative models to recover detail from original low-resolution assets. All textures are upscaled to **4x** their original resolution.
-
-* **Environment Assets:** Upscaled using the **Topaz Gigapixel AI 'Recover'** generative model for maximum texture reconstruction.
-* **Character Faces:** Processed via a multi-stage approach:
-    1. 2x upscale using 'Redefine' model.
-    2. 2x upscale using 'High Fidelity' model.
-    3. Manual airbrushing in **Adobe Photoshop** to remove artifacts and enhance clarity.
-* **Clothing & Equipment:** 4x upscale using 'High Fidelity' model with manual detail enhancement.
-* **UI Elements:** Missing or low-quality UI assets are redrawn from scratch to ensure pixel-perfect clarity.
-* **Special Effects:** Textures for fire, clouds, and lighting are upscaled and treated with Gaussian Blur to eliminate pixelation.
-
----
-
-## 📂 Project Structure
-
-* `/index.html`: The interactive comparison web app.
-* `/images/`: Contains the `-before.jpg` and `-after.jpg` comparison pairs.
-* `README.md`: Project documentation.
+Download packages from [GitHub Releases](https://github.com/shoopkid/Skies-of-Arcadia-Legends-HD-Textures-Pack/releases/tag/v0.2.0):
+1. **01. UI Assets** (24.8 MB) — Menus, status icons, dialog portraits.
+2. **02. Characters & Weapons** (1.0 GB) — Character models and weapons.
+3. **03a. Environment &ndash; Overworld & Ships** (800.5 MB) — World map and airships.
+4. **03b. Environment &ndash; Disc 1 (Part 1)** (1.8 GB) — Pirate Isle through Valua.
+5. **03c. Environment &ndash; Disc 1 (Part 2)** (1.6 GB) — Dungeons, towns, and shrines.
+6. **03d. Environment &ndash; Disc 2** (1.4 GB) — Late-game towns, dungeons, and Soltis.
+7. **04. Effects** (208.0 MB) — Magic spells and particle effects.
+8. **05. Cutscene Artwork** (38.4 MB) — Cutscenes, illustrations, discovery art.
 
 ---
 
-## 🤝 Credits & Acknowledgments
+## How to Install on Dolphin Emulator
 
-* **Bighead & frozenwings:** For the massive foundational work that made this project possible.
-* **Lewis Wake:** Project continuation, AI upscaling, and manual retouching.
-* **Topaz Labs:** For the Gigapixel AI suite.
-* **SEGA / Overworks:** The original creators of Skies of Arcadia.
+1. **Download Packages:** Download your desired `.7z` packages from [GitHub Releases](https://github.com/shoopkid/Skies-of-Arcadia-Legends-HD-Textures-Pack/releases/tag/v0.2.0).
+2. **Extract to Dolphin Textures Folder:** Extract with [7-Zip](https://www.7-zip.org/) directly into Dolphin's texture directory (`GEA` folder):
+   * **Windows:** `Documents\Dolphin Emulator\Load\Textures\`
+   * **macOS:** `~/Library/Application Support/Dolphin/Load/Textures/`
+   * **Linux:** `~/.local/share/dolphin-emu/Load/Textures/`
+   * *The final path will be `.../Load/Textures/GEA`.*
+3. **Enable Custom Textures in Dolphin:**
+   * Open Dolphin &rarr; **Graphics** &rarr; **Advanced** tab.
+   * Check **Load Custom Textures**.
+   * Check **Prefetch Custom Textures** (loads DDS textures directly into GPU VRAM for stutter-free play).
+4. **Recommended Backend:** Set backend to **Vulkan** or **Direct3D 11/12** (`Graphics` &rarr; `General`).
 
 ---
 
-## 📜 License
-*Note: This is a fan-made project. All original game assets belong to SEGA. The upscaled textures provided here are for personal use with emulators like Dolphin.*
+## Project Roadmap
+
+* **Completed:**
+  * **v0.1.0:** Initial texture conversion to BC7 DDS and Dolphin `GEA` folder alignment.
+  * **v0.2.0:** Weapon restorations, Fina color calibrations, Dolphin mipmap fixes, and environment packages under 2 GB.
+* **In Progress / Planned:**
+  * **ISO Texture Dump (71% Complete):** Extracting and deduplicating all 30,412 textures from the GameCube ISO (21,708 unique textures cataloged).
+  * **Field & Discoveries (97% Complete):** Finishing remaining field textures, 89 Discovery artworks (`hakken00`&ndash;`hakken89`), and world map chunks (`fiel00`&ndash;`fiel56`).
+  * **Remaining Game Areas:** Late-game dungeons, ship battle arenas (`5XX` series), and battle visual effects.
+
+---
+
+## Comparison Gallery
+
+View before-and-after sliders:
+**[Comparison Gallery](https://skiesofarcadiahd.xyz/)**
+
+---
+
+## Upscale Methodology
+
+* **Weapons & Characters:** 4x upscale with Topaz Gigapixel AI 'High fidelity' with Photoshop adjustments for specular highlights and edge cleanup.
+* **Character Faces:** 2x 'Redefine' + 2x 'High fidelity' + Photoshop airbrushing.
+* **Environments:** Topaz Gigapixel AI 'Recover' model.
+* **UI:** Redrawn and cleaned up for sharpness.
+* **Special Effects:** 4x upscale with Gaussian blur filtering.
+
+---
+
+## Credits
+
+* **Bighead & frozenwings:** Original texture pack creators.
+* **Lewis Wake (Shoopkid):** Texture calibration, ISO extraction, AI upscaling, and package maintenance.
+* **SEGA / Overworks:** Original creators of Skies of Arcadia.
+
+---
+
+## License
+*Fan preservation project. Original game assets belong to SEGA.*
