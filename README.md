@@ -1,6 +1,6 @@
 # Skies of Arcadia Legends HD Texture Pack
 
-A high-definition texture replacement pack for **Skies of Arcadia Legends** (GameCube) on Dolphin Emulator.
+A 99% complete high-definition texture replacement pack for **Skies of Arcadia Legends** (GameCube) on Dolphin Emulator.
 
 Originally created by **Bighead** and **frozenwings**, continued, expanded, and curated by **Shoopkid**.
 
@@ -10,29 +10,28 @@ Originally created by **Bighead** and **frozenwings**, continued, expanded, and 
 
 Download releases and modular packages from **[GitHub Releases (v0.3.0)](https://github.com/shoopkid/Skies-of-Arcadia-Legends-HD-Textures-Pack/releases/tag/v0.3.0)**.
 
-### Changes in v0.3.0
-* **100% ISO Archive Coverage (31,010 Textures):** Full 4x upscale and curation across all game files dumped directly from the raw GameCube disc image.
+### Highlights in v0.3.0
+* **99% Game Coverage (31,010 Textures):** Massive 4x overhaul covering party members, enemies, bosses, airships, towns, dungeons, overworld terrain, and combat stages.
+* **BC7 DDS Format & Zero Stutter:** Full hardware mipmaps with Dolphin GPU prefetching for smooth, zero-stutter playback.
 * **Alpha Channel & Ghost Haze Audit:** Systematic removal of low-alpha edge fringing ($1 \le \alpha \le 25$) to eliminate gray bounding-box outlines on character cutouts and foliage.
-* **Standardized Atmospheric Pipeline:** Transparent overlays (clouds, smoke, mist, fog, and heat haze) upscaled with proportional Gaussian blur strictly on the alpha channel to preserve soft gradients without pixel stair-stepping.
-* **Scene Corrections:** Resolved Mid-Ocean Rhaknam cutscene fog washout bug, purged 7 solid-opaque hash-colliding textures in Temple of Pyrynn Area 2, repaired Galcian eye/cape alpha masks, and standardized the Delphinus Bridge flag shadow.
-* **Runtime GPU Textures:** Dynamic Format 8 (C4, 4-bit paletted) textures generated during endgame bosses, ship battles, and Intro Movie A extracted and remastered with dual `_arb.dds` compatibility aliases.
-* **BC7 DDS Format:** Full hardware mipmaps with GPU prefetching for zero-stutter Dolphin playback.
+* **Atmospheric Smoothing Pipeline:** Proportional Gaussian blur applied strictly to alpha channels for transparent particles and haze (smoke, clouds, mist, fog).
+* **Runtime GPU Aliases:** Dual `_arb.dds` compatibility naming for dynamic runtime paletted textures.
 
 ---
 
 ## Modular Packages
 
 Download packages from [GitHub Releases](https://github.com/shoopkid/Skies-of-Arcadia-Legends-HD-Textures-Pack/releases/tag/v0.3.0):
-1. **01. Characters & Enemies** (1.17 GB) — Party members, costumes, weapons, Admirals, NPCs, enemies, Gigas, bosses.
-2. **02a. Towns & Ports (Part 1)** (1.26 GB) — Pirate Isle, Sailor's Island, Lower City Valua, Maramba, Horteka, Nasrad.
-3. **02b. Towns & Ports (Part 2)** (1.30 GB) — Crescent Isle HQ, Esperanza, Yafutoma, Tenkou Island, Great Silver Shrine.
-4. **03a. Dungeons & Ruins (Part 1)** (1.12 GB) — Alfonso's Ship, Shrine Island, Catacombs, Upper City, Pyrynn, Moonstone Mountain, Rixis, Daccat's Island.
-5. **03b. Dungeons & Ruins (Part 2)** (1.40 GB) — Grand Fortress, Mt. Kazai, The Dark Rift, Glacia, Tartas, Dangral Island, Vortex, Hydra, Soltis.
-6. **04. Ships & Ship Battles** (597.3 MB) — Delphinus, Little Jack, Albatross, Armada vessels, bridge interiors, combat stages.
-7. **05. Overworld** (141.9 MB) — Skyboxes, cloud layers, landmasses, floating islands, discoveries, rifts.
-8. **06. Battle Arenas & Effects** (940.7 MB) — Combat stages, magic spells (all 6 Moon elements), S-Crafts, weapon trails, particles.
-9. **07. UI, Menus & Fonts** (40.6 MB) — Dialogue fonts, compass, HUD command wheels, party status screens, crew cards.
-10. **08. Cutscenes & Ending** (811.1 MB) — Intro Movies A & B, story flashback artwork, mid-ocean events, endgame, epilogue.
+1. **01. Characters & Enemies** (1.17 GB • 5,359 textures)
+2. **02a. Towns & Ports (Part 1)** (1.26 GB • 2,440 textures)
+3. **02b. Towns & Ports (Part 2)** (1.30 GB • 2,299 textures)
+4. **03a. Dungeons & Ruins (Part 1)** (1.12 GB • 2,204 textures)
+5. **03b. Dungeons & Ruins (Part 2)** (1.40 GB • 3,090 textures)
+6. **04. Ships & Ship Battles** (597.3 MB • 2,432 textures)
+7. **05. Overworld** (141.9 MB • 878 textures)
+8. **06. Battle Arenas & Effects** (940.7 MB • 7,537 textures)
+9. **07. UI, Menus & Fonts** (40.6 MB • 322 textures)
+10. **08. Cutscenes & Ending** (811.1 MB • 4,449 textures)
 
 ---
 
@@ -55,12 +54,13 @@ Download packages from [GitHub Releases](https://github.com/shoopkid/Skies-of-Ar
 ## Project Roadmap
 
 * **Completed:**
-  * **v0.1.0:** Initial texture conversion to BC7 DDS and Dolphin `GEA` folder alignment.
+  * **v0.1.0:** Initial texture conversion to BC7 DDS format and Dolphin `GEA` folder alignment.
   * **v0.2.0:** Weapon restorations, Fina color calibrations, Dolphin mipmap fixes, and environment packages under 2 GB.
-  * **v0.3.0 (100% ISO Remaster):** Complete 4x coverage across all 31,010 textures extracted directly from GameCube ISO internal archives. Standardized atmospheric alpha pipeline, scene corrections, and dynamic GPU runtime textures.
-* **In Progress / Planned:**
-  * **v0.3.1 (Patches & Fixes):** Targeted visual corrections and community patch updates for individual modular 7z packages.
-  * **QA Playthrough:** Full playthrough QA across all 84 ship battles and side-quest discoveries.
+  * **v0.3.0 (99% Complete HD Texture Mod):** 31,010 textures across 10 modular packages in BC7 DDS with hardware mipmaps. Full alpha channel audit, ghost haze elimination, standardized 10px Gaussian blur on transparency overlays, and dynamic GPU runtime texture aliases.
+* **In Progress & Planned:**
+  * **v0.3.1 (Playthrough QA & Patches):** Currently playing through the game to identify scenes and assets that require fixing, keeping a sharp eye out for any noticeable issues. Any corrections will be packaged into modular updates.
+  * **v0.4.0 (Full Game Capture):** Capture all remaining assets upscaled without issue, including remaining UI assets and tracked-down environment effects.
+  * **v1.0.0 (The Definitive Goal):** Complete milestone achievable when all game assets across the entire game are upscaled and verified without issue.
 
 ---
 
@@ -71,23 +71,22 @@ View before-and-after sliders:
 
 ---
 
-## Upscale Methodology
+## Process
+*Upscaling methods*
 
-* **Weapons & Characters:** 4x upscale with Topaz Gigapixel AI 'High fidelity' with Photoshop adjustments for specular highlights and edge cleanup.
-* **Character Faces:** 2x 'Redefine' + 2x 'High fidelity' + Photoshop airbrushing.
-* **Environments:** Topaz Gigapixel AI 'Recover' model.
-* **UI:** Redrawn and cleaned up for sharpness.
-* **Special Effects:** 4x upscale with Gaussian blur filtering on alpha channels.
+* **Characters — Faces, Clothing and Weapons:** Faces were upscaled with Topaz Gigapixel Redefine tool at 2x and low creativity settings to generate higher resolution textures. Face textures were then upscaled in Topaz Gigapixel with the High Fidelity model at 2x, minimal sharpen, high denoise, and high compression fix. This results in a smooth upscaled version close to the original artistic direction of the base assets. Any assets that require airbrushing and tweaking are processed in Photoshop in post. This is an ongoing project. Characters body and clothing textures are largely upscaled with Topaz Gigapixel High fidelity model at 4x.
+* **Environment:** Rock and stone textures upscaled with Topaz Gigapixel Recover generative model. Natural foliage is upscaled with high fidelity model in Topaz Gigapixel.
+* **UI and Fonts:** UI and Fonts were largely carried over from the original Bighead and frozenwings project. Assets that were left unfinished have been worked on by Shoopkid (ie. Cupil Cham alert, Moonfish target, Delphinus compass, Battle UI Captain Command Icon.) Mostly redrawn entirely from scratch in Photoshop and Procreate when required. Original base textures are brought into either Photoshop or Procreate, upscaled 4x and then redrawn or recomposed using that as a foundation.
+* **Effects — Shadows, Fires, Glowing Assets:** Special effect textures (clouds, smoke, fire, shadows, lighting) are upscaled 4x with Gaussian blur applied strictly to the alpha channel to eliminate harsh pixelation without gradient loss. These are the hardest to upscale as the way the Gamecube engine can read transparency textures is hit or miss. Photoshop upscaled 4x then applying a gaussian blur of 10px radius is most effective at achieving a successful upscale.
 
 ---
 
 ## Credits
 
 * **Bighead & frozenwings:** Original texture pack creators.
-* **Shoopkid:** Texture calibration, ISO extraction, curation, AI upscaling, and package maintenance.
+* **Shoopkid:** Texture calibration, curation, AI upscaling, and package maintenance.
 * **SEGA / Overworks:** Original creators of Skies of Arcadia.
 
 ---
 
-## License
-*Fan preservation project. Original game assets belong to SEGA.*
+*A fan preservation hobby project curated by Shoopkid to achieve a long desire for a Skies of Arcadia HD remaster. Not affiliated with SEGA or Overworks. All original game assets, lore, characters, and trademarks belong to SEGA / Overworks.*
