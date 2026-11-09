@@ -48,6 +48,10 @@ For modders, digital archivists, and technical creators, we also provide the raw
   * *What it is:* The deduplicated canonical master set of 1x native resolution textures. Strips all redundant duplicate textures across models (such as eye blinks, terrain stones, sky gradients, and shared UI assets).
   * *Use case:* Eliminates thousands of hours of redundant upscaling work. Allows upscaling each distinct asset once without processing duplicate hashes across different ISO subdirectories.
 
+* **[Model Directory Index (CSV Map)](https://github.com/shoopkid/Skies-of-Arcadia-Legends-HD-Textures-Pack/releases/download/v0.3.0/Model_Directory_Map.csv)** (135 KB .csv | 1,703 mapped folders)
+  * *What it is:* A complete index mapping all streamlined model ID folders (`GEA/01/...`, `GEA/02/002/...`) to their human-readable descriptions and texture counts.
+  * *Use case:* Essential reference for game recompiler developers, modders, and anyone navigating the minimal folder tree.
+
 ---
 
 ## How to Install on Dolphin Emulator
@@ -55,8 +59,9 @@ For modders, digital archivists, and technical creators, we also provide the raw
 1. **Download Packages:** Download your desired `.7z` packages from [GitHub Releases](https://github.com/shoopkid/Skies-of-Arcadia-Legends-HD-Textures-Pack/releases/tag/v0.3.0).
 2. **Extract to Dolphin Textures Folder:** Extract with [7-Zip](https://www.7-zip.org/) directly into Dolphin's texture directory (`GEA` folder):
    * **Windows:** `Documents\Dolphin Emulator\Load\Textures\`
+   * **Steam Deck (SteamOS):** `~/.var/app/org.DolphinEmu.dolphin-emu/data/dolphin-emu/Load/Textures/` (Flatpak) or `/home/deck/Emulation/storage/dolphin/Load/Textures/` (EmuDeck)
+   * **Linux (Desktop):** `~/.local/share/dolphin-emu/Load/Textures/` (Native) or `~/.var/app/org.DolphinEmu.dolphin-emu/data/dolphin-emu/Load/Textures/` (Flatpak)
    * **macOS:** `~/Library/Application Support/Dolphin/Load/Textures/`
-   * **Linux:** `~/.local/share/dolphin-emu/Load/Textures/`
    * *The final path will be `.../Load/Textures/GEA`.*
 3. **Enable Custom Textures in Dolphin:**
    * Open Dolphin &rarr; **Graphics** &rarr; **Advanced** tab.
