@@ -69,6 +69,7 @@
         <nav class="desktop-nav" aria-label="Main Navigation">
           <ul>
             <li><a href="#download">Download</a></li>
+            <li><a href="#raw-dumps">Raw Dumps</a></li>
             <li><a href="#changelog">Changelog</a></li>
             <li><a href="#installation">Installation</a></li>
             <li><a href="#gallery-section">Gallery</a></li>
@@ -103,6 +104,7 @@
     <nav id="mobileNav" class="mobile-nav" aria-hidden="true">
       <ul>
         <li><a href="#download">Download</a></li>
+        <li><a href="#raw-dumps">Raw Dumps</a></li>
         <li><a href="#changelog">Changelog</a></li>
         <li><a href="#installation">How to Install</a></li>
         <li><a href="#gallery-section">Comparison Gallery</a></li>
@@ -134,6 +136,19 @@
             </svg>
             Download v0.3.0 (GitHub)
           </a>
+          <a
+            href="https://drive.google.com/drive/folders/1BuXhFw8TEIgEIbI5aqrz8OaobzVJvLtf?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M7.71 3.504L1.154 14.996l3.428 5.992 6.556-11.492L7.71 3.504zm2.022 11.492L6.304 20.988h13.124l3.428-5.992H9.732zm13.124-.004L16.292 3.504H9.712l6.564 11.492h6.58z"/>
+            </svg>
+            Download Mirror (Google Drive)
+          </a>
+        </div>
+        <div style="margin-top: 14px;">
           <a href="#gallery-section" class="btn btn-secondary">
             <svg
               width="24"
@@ -171,7 +186,7 @@
           A 99% complete HD texture overhaul in 10 modular packages in Microsoft DirectX BC7 DDS format. Textures prefetch directly into GPU VRAM for stutter-free 60 FPS performance in Dolphin.
         </p>
 
-        <div class="button-group">
+        <div class="button-group" style="display: flex; gap: 16px; flex-wrap: wrap;">
           <a
             href="https://github.com/shoopkid/Skies-of-Arcadia-Legends-HD-Textures-Pack/releases/tag/v0.3.0"
             target="_blank"
@@ -182,6 +197,17 @@
               <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
             </svg>
             View GitHub Release (v0.3.0)
+          </a>
+          <a
+            href="https://drive.google.com/drive/folders/1BuXhFw8TEIgEIbI5aqrz8OaobzVJvLtf?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M7.71 3.504L1.154 14.996l3.428 5.992 6.556-11.492L7.71 3.504zm2.022 11.492L6.304 20.988h13.124l3.428-5.992H9.732zm13.124-.004L16.292 3.504H9.712l6.564 11.492h6.58z"/>
+            </svg>
+            Google Drive Mirror Folder
           </a>
           <a
             href="https://github.com/shoopkid/Skies-of-Arcadia-Legends-HD-Textures-Pack"
@@ -310,6 +336,85 @@
             </div>
             <svg class="bento-icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
           </a>
+        </div>
+      </section>
+      <!-- Raw Texture Dumps Section -->
+      <section id="raw-dumps" class="surface-panel raw-dumps-section">
+        <h2>Raw Texture Dumps &amp; Modding Archives</h2>
+        <p>
+          For modders, digital archivists, and technical creators, we provide complete unscaled 1x GameCube asset extractions directly from the original disc. These packages serve as the baseline reference foundation for game research, model inspection, and custom upscaling pipelines.
+        </p>
+
+        <div class="raw-dumps-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-top: 32px;">
+          <!-- Card 1: Raw ISO Dump -->
+          <div class="raw-dump-card" style="background-color: var(--bg-color); border: 1px solid var(--border-color); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+                <h3 style="font-size: 1.3rem; margin: 0;">Raw ISO Texture Dump</h3>
+                <span class="file-size">850 MB (.7z)</span>
+              </div>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 16px;">
+                <strong>107,757 files &bull; 2,558 folders &bull; 1.55 GB (1.74 GB on disk)</strong>
+              </p>
+              <h4 style="font-size: 1rem; margin-top: 16px; margin-bottom: 6px;">What it is:</h4>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 14px;">
+                Every single PNG texture file dumped directly from the Skies of Arcadia Legends GameCube ISO disc for every 3D model, character, NPC, enemy, and map asset using model extraction tools.
+              </p>
+              <h4 style="font-size: 1rem; margin-bottom: 6px;">How it can be useful:</h4>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 24px;">
+                Provides the complete, unfiltered baseline reference of the original GameCube game files. Invaluable for modders analyzing game hierarchy, verifying model texture bindings, or creating entirely new custom texture overhauls.
+              </p>
+            </div>
+            <a
+              href="https://drive.google.com/file/d/1UoPstVykU6wGnGgPEeRN8pm7l0zxMQa1/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary"
+              style="width: 100%;"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Download Raw ISO Dump (Google Drive)
+            </a>
+          </div>
+
+          <!-- Card 2: PNG 1x No Duplicates -->
+          <div class="raw-dump-card" style="background-color: var(--bg-color); border: 1px solid var(--border-color); border-radius: 12px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+                <h3 style="font-size: 1.3rem; margin: 0;">PNG 1x Dump (No Duplicates)</h3>
+                <span class="file-size">587 MB (.7z)</span>
+              </div>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 16px;">
+                <strong>30,571 files &bull; 1,987 folders &bull; 595 MB (648 MB on disk)</strong>
+              </p>
+              <h4 style="font-size: 1rem; margin-top: 16px; margin-bottom: 6px;">What it is:</h4>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 14px;">
+                A deduplicated canonical master set of the 1x native resolution game textures. Many in-game models share identical base textures (such as eye blinks, terrain stones, sky gradients, and shared UI assets); this package strips out all redundant duplicate textures across models.
+              </p>
+              <h4 style="font-size: 1rem; margin-bottom: 6px;">How it can be useful:</h4>
+              <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 24px;">
+                Eliminates thousands of hours of redundant upscaling work. Modders and artists can upscale each distinct asset once without wasting time retraining or processing identical image hashes across separate model folders.
+              </p>
+            </div>
+            <a
+              href="https://drive.google.com/file/d/1u0_dIfL0xAad-OKtmU2ebxpCek6R08LK/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary"
+              style="width: 100%;"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              Download No-Dupes Dump (Google Drive)
+            </a>
+          </div>
         </div>
       </section>
 
@@ -477,8 +582,35 @@
                 and micro-stutters entirely.
               </p>
               <p style="margin-top: 8px; font-size: 0.95rem; color: var(--text-tertiary);">
-                <em>Recommended: Under <code>Graphics &rarr; General</code>, ensure Backend is set to <strong>Vulkan</strong> or <strong>Direct3D 12</strong>. Under <code>Enhancements</code>, check <strong>Arbitrary Mipmap Detection</strong> and uncheck <strong>Disable Fog</strong>.</em>
+                <em>Recommended: Under <code>Graphics &rarr; General</code>, ensure Backend is set to <strong>Vulkan</strong> or <strong>Direct3D 12</strong>.</em>
               </p>
+            </div>
+          </li>
+          <li>
+            <div class="step-content">
+              <h3 class="step-title">Recommended Dolphin Enhancements Settings</h3>
+              <p>
+                For the best visual fidelity, optimal mipmap transitions, and authentic atmospheric rendering, configure your Dolphin <code>Graphics &rarr; Enhancements</code> tab to match our tested profile:
+              </p>
+              <ul style="margin: 12px 0 16px 24px; color: var(--text-secondary); font-size: 1rem;">
+                <li><strong>Internal Resolution:</strong> <code>4x Native (2560x2112) for 1440p</code> (or 3x for 1080p, 5x&ndash;6x for 4K)</li>
+                <li><strong>Anti-Aliasing:</strong> <code>2x MSAA</code> (or higher)</li>
+                <li><strong>Texture Filtering:</strong> <code>Force Linear and 16x Anisotropic</code></li>
+                <li><strong>Scaled EFB Copy:</strong> Checked</li>
+                <li><strong>Widescreen Hack:</strong> Checked (for 16:9 displays)</li>
+                <li><strong>Disable Fog:</strong> Unchecked (<em>fog must remain enabled</em> for proper skybox depth and atmosphere)</li>
+                <li><strong>Disable Copy Filter:</strong> Checked</li>
+                <li><strong>Force 24-Bit Color:</strong> Checked</li>
+                <li><strong>Arbitrary Mipmap Detection:</strong> Checked (<em>crucial</em> for custom hardware mipmaps)</li>
+              </ul>
+              <div style="margin-top: 16px;">
+                <img
+                  src="images/dolphin-enhancements-settings.png"
+                  alt="Recommended Dolphin Enhancements Settings configuration screenshot"
+                  loading="lazy"
+                  style="max-width: 480px; width: 100%; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: var(--shadow-md); display: block;"
+                />
+              </div>
             </div>
           </li>
         </ol>

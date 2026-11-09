@@ -8,7 +8,8 @@ Originally created by **Bighead** and **frozenwings**, continued, expanded, and 
 
 ## Download: v0.3.0 (November 2026)
 
-Download releases and modular packages from **[GitHub Releases (v0.3.0)](https://github.com/shoopkid/Skies-of-Arcadia-Legends-HD-Textures-Pack/releases/tag/v0.3.0)**.
+* **Primary Download:** **[GitHub Releases (v0.3.0)](https://github.com/shoopkid/Skies-of-Arcadia-Legends-HD-Textures-Pack/releases/tag/v0.3.0)**
+* **Google Drive Mirror:** **[Google Drive Folder Mirror](https://drive.google.com/drive/folders/1BuXhFw8TEIgEIbI5aqrz8OaobzVJvLtf?usp=sharing)**
 
 ### Highlights in v0.3.0
 * **99% Game Coverage (31,010 Textures):** Massive 4x overhaul covering party members, enemies, bosses, airships, towns, dungeons, overworld terrain, and combat stages.
@@ -35,6 +36,20 @@ Download packages from [GitHub Releases](https://github.com/shoopkid/Skies-of-Ar
 
 ---
 
+## Raw Texture Dumps & Modding Archives
+
+For modders, digital archivists, and technical creators, we also provide the raw unscaled 1x GameCube asset extractions directly from the original disc:
+
+* **[Raw ISO Texture Dump](https://drive.google.com/file/d/1UoPstVykU6wGnGgPEeRN8pm7l0zxMQa1/view?usp=sharing)** (850 MB .7z | 107,757 files, 2,558 folders | 1.55 GB uncompressed, 1.74 GB on disk)
+  * *What it is:* Every single PNG texture dumped directly from the Skies of Arcadia Legends GameCube ISO disc for every 3D model, character, NPC, enemy, and map asset using model extraction tools.
+  * *Use case:* Provides the complete, unfiltered baseline reference of the original GameCube game files for asset research, model hierarchy inspection, and custom texture overhauls.
+
+* **[PNG 1x Dump (No Duplicates)](https://drive.google.com/file/d/1u0_dIfL0xAad-OKtmU2ebxpCek6R08LK/view?usp=sharing)** (587 MB .7z | 30,571 files, 1,987 folders | 595 MB uncompressed, 648 MB on disk)
+  * *What it is:* The deduplicated canonical master set of 1x native resolution textures. Strips all redundant duplicate textures across models (such as eye blinks, terrain stones, sky gradients, and shared UI assets).
+  * *Use case:* Eliminates thousands of hours of redundant upscaling work. Allows upscaling each distinct asset once without processing duplicate hashes across different ISO subdirectories.
+
+---
+
 ## How to Install on Dolphin Emulator
 
 1. **Download Packages:** Download your desired `.7z` packages from [GitHub Releases](https://github.com/shoopkid/Skies-of-Arcadia-Legends-HD-Textures-Pack/releases/tag/v0.3.0).
@@ -48,6 +63,16 @@ Download packages from [GitHub Releases](https://github.com/shoopkid/Skies-of-Ar
    * Check **Load Custom Textures**.
    * Check **Prefetch Custom Textures** (loads DDS textures directly into GPU VRAM for stutter-free play).
 4. **Recommended Backend:** Set backend to **Vulkan** or **Direct3D 12** (`Graphics` &rarr; `General`).
+5. **Recommended Dolphin Enhancements Settings (`Graphics` &rarr; `Enhancements`):**
+   * **Internal Resolution:** `4x Native (2560x2112) for 1440p` (or 3x for 1080p, 5x–6x for 4K)
+   * **Anti-Aliasing:** `2x MSAA` (or higher)
+   * **Texture Filtering:** `Force Linear and 16x Anisotropic`
+   * **Scaled EFB Copy:** Checked
+   * **Widescreen Hack:** Checked (for 16:9 displays)
+   * **Disable Fog:** Unchecked (*fog must remain enabled* for authentic skybox depth and atmosphere)
+   * **Disable Copy Filter:** Checked
+   * **Force 24-Bit Color:** Checked
+   * **Arbitrary Mipmap Detection:** Checked (*crucial* for custom hardware mipmaps)
 
 ---
 
