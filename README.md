@@ -1,6 +1,6 @@
-# Skies of Arcadia Legends HD Texture Pack
+# Skies of Arcadia Legends HD & 4K Texture Pack
 
-A 99% complete high-definition texture replacement pack for **Skies of Arcadia Legends** (GameCube) on Dolphin Emulator.
+A complete high-definition texture replacement mod pack for **Skies of Arcadia Legends** (GameCube) on Dolphin Emulator, delivering pristine 4x remastered assets for 1080p, 1440p, and 4K UHD gameplay with zero stutter.
 
 Originally created by **Bighead** and **frozenwings**, continued, expanded, and curated by **Shoopkid**.
 
