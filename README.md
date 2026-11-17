@@ -6,33 +6,34 @@ Originally created by **Bighead** and **frozenwings**, continued, expanded, and 
 
 ---
 
-## Download: v0.3.0 (November 2026)
+## Download: v0.3.1 (November 2026)
 
-* **Primary Download:** **[GitHub Releases (v0.3.0)](https://github.com/shoopkid/Skies-of-Arcadia-Legends-HD-Textures-Pack/releases/tag/v0.3.0)**
+* **Primary Download:** **[GitHub Releases (v0.3.1)](https://github.com/shoopkid/Skies-of-Arcadia-Legends-HD-Textures-Pack/releases/tag/v0.3.1)**
 * **Google Drive Mirror:** **[Google Drive Folder Mirror](https://drive.google.com/drive/folders/1BuXhFw8TEIgEIbI5aqrz8OaobzVJvLtf?usp=sharing)**
 
-### Highlights in v0.3.0
-* **99% Game Coverage (31,010 Textures):** Massive 4x overhaul covering party members, enemies, bosses, airships, towns, dungeons, overworld terrain, and combat stages.
-* **BC7 DDS Format & Zero Stutter:** Full hardware mipmaps with Dolphin GPU prefetching for smooth, zero-stutter playback.
-* **Alpha Channel & Ghost Haze Audit:** Systematic removal of low-alpha edge fringing ($1 \le \alpha \le 25$) to eliminate gray bounding-box outlines on character cutouts and foliage.
-* **Atmospheric Smoothing Pipeline:** Proportional Gaussian blur applied strictly to alpha channels for transparent particles and haze (smoke, clouds, mist, fog).
-* **Runtime GPU Aliases:** Dual `_arb.dds` compatibility naming for dynamic runtime paletted textures.
+### Highlights in v0.3.1
+* **Albatross Crew & Citizen Face Remasters:** Remastered facial expressions and features for Dyne, Briggs, Timmus, Patch, Boris, Alan, Lindsi, Peter, Luke, Mabel, and Martha using Japanese Dreamcast master textures.
+* **Party Face & Costume Restorations:** Upgraded low-resolution facial expression textures for Vyse, Aika, and Fina, restored Vyse's belt buckle geometry, and color-matched scarf highlights.
+* **Galcian Uniform & Alfonso Smile:** Stripped improper transparency causing see-through meshes on Galcian's uniform, restored clipped gold trim, and cleaned up Alfonso's smiling face texture.
+* **Combat Portraits Overhaul:** Cleaned background white-bleed noise on battle portrait badges to eliminate compression halos, and enforced single-level mipmaps for razor-sharp 2D battle UI.
+* **Cutscene & Environmental Restorations:** Removed halo artifacts around the Intro Movie Green Moon, repaired Ixa'taka cloud clipping, reconstructed the Valuan flagship crest, repaired Albatross circular viewports, and added volumetric steam hazes in Temple of Pyrynn Area 2.
+* **Game-Wide Transparency Purge:** Cleaned low-alpha fringes and background color bleed across over 500 textures (magic spells, boss decals, foliage, lanterns, and ironwork) to eliminate square outlines and glowing borders.
 
 ---
 
 ## Modular Packages
 
-Download packages from [GitHub Releases](https://github.com/shoopkid/Skies-of-Arcadia-Legends-HD-Textures-Pack/releases/tag/v0.3.0):
-1. **01. Characters & Enemies** (1.17 GB • 5,359 textures)
-2. **02a. Towns & Ports (Part 1)** (1.26 GB • 2,440 textures)
-3. **02b. Towns & Ports (Part 2)** (1.30 GB • 2,299 textures)
-4. **03a. Dungeons & Ruins (Part 1)** (1.12 GB • 2,204 textures)
-5. **03b. Dungeons & Ruins (Part 2)** (1.40 GB • 3,090 textures)
-6. **04. Ships & Ship Battles** (597.3 MB • 2,432 textures)
-7. **05. Overworld** (141.9 MB • 878 textures)
-8. **06. Battle Arenas & Effects** (940.7 MB • 7,537 textures)
-9. **07. UI, Menus & Fonts** (40.6 MB • 322 textures)
-10. **08. Cutscenes & Ending** (811.1 MB • 4,449 textures)
+Download packages from [GitHub Releases](https://github.com/shoopkid/Skies-of-Arcadia-Legends-HD-Textures-Pack/releases/tag/v0.3.1):
+1. **01. Characters & Enemies** (1.38 GB • 5,762 textures)
+2. **02a. Towns & Ports (Part 1)** (1.28 GB • 2,421 textures)
+3. **02b. Towns & Ports (Part 2)** (1.33 GB • 2,299 textures)
+4. **03a. Dungeons & Ruins (Part 1)** (1.15 GB • 2,211 textures)
+5. **03b. Dungeons & Ruins (Part 2)** (1.44 GB • 3,089 textures)
+6. **04. Ships & Ship Battles** (607 MB • 2,455 textures)
+7. **05. Overworld** (143 MB • 882 textures)
+8. **06. Battle Arenas & Effects** (945 MB • 7,538 textures)
+9. **07. UI, Menus & Fonts** (46.3 MB • 334 textures)
+10. **08. Cutscenes & Ending** (815 MB • 4,454 textures)
 
 ---
 
